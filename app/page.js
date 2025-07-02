@@ -11,6 +11,9 @@ export default function Home() {
     e.preventDefault();
     try {
       const response = await axios.post('/api/users', { name, email }); 
+      setName (""); 
+      setEmail ("");
+      alert ("User Added Sucessfully")
       console.log('User created:', response.data);
     } catch (err) {
       console.error(err);
